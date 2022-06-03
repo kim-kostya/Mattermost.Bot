@@ -1,22 +1,18 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Mattermost.Bot.Api.DTO;
 using Newtonsoft.Json;
 
 namespace Mattermost.Bot.Api
 {
-    public class ChannelsApiRequest
+    public class TeamsApiRequest
     {
         private string _host;
-        
-        public ChannelsApiRequest(string host) 
+
+        public TeamsApiRequest(string host) 
         {
             _host = host;
         }
-        
-        public HttpRequestMessage GetListOfChannels(ListOfChannelsRequestDTO request) 
+
+        public HttpRequestMessage GetTeams(ListOfRequestDTO request) 
         {
             var message = new HttpRequestMessage {
                 Method = HttpMethod.Get,
@@ -28,5 +24,14 @@ namespace Mattermost.Bot.Api
             return message;
         }
 
+        public HttpRequestMessage GetTeam(string teamId)
+        {
+            var message = new HttpRequestMessage {
+                Method = HttpMethod.Get,
+                RequestUri = new Uri($"{_host}/{teamId}")
+            };
+
+            return message;
+        }
     }
 }

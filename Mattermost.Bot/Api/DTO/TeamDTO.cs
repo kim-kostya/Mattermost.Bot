@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace Mattermost.Bot
+namespace Mattermost.Bot.Api.DTO
 {
     public class TeamDTO
     {

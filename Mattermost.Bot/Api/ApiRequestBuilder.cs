@@ -8,7 +8,7 @@ namespace Mattermost.Bot.Api
 
         public ApiBuilder(string host) 
         {
-            _host = $"{host}/api/v4";
+            _host = $"https://{host}/api/v4";
         }   
 
         public HttpRequestMessage ping() 

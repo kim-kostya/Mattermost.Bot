@@ -27,5 +27,23 @@ namespace Mattermost.Bot.Api
 
             return message;
         }
+
+        public HttpRequestMessage GetFile(string fileId) {
+            var message = new HttpRequestMessage {
+                Method = HttpMethod.Get,
+                RequestUri = new Uri(_host)
+            };
+
+            return message;
+        }
+
+        public HttpRequestMessage GetFileLink(string fileId) {
+            var message = new HttpRequestMessage {
+                Method = HttpMethod.Get,
+                RequestUri = new Uri($"{_host}/link")
+            };
+
+            return message;
+        }
     }
 }

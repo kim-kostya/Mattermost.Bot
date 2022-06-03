@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Mattermost.Bot.Api
+namespace Mattermost.Bot.Api.DTO
 {
-    public class TeamsApiRequest
+    public class WebSocketResponse
     {
         
     }

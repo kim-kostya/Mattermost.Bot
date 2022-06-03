@@ -8,7 +8,7 @@ namespace Mattermost.Bot.Api.DTO
         public string AssociatedToGroup { get; set; } = "";
 
         [JsonProperty(PropertyName = "per_page")]
-        public int PerPage { get; set; }
+        public int PerPage { get; set; } = 60;
 
         [JsonProperty(PropertyName = "page")]
         public int Page { get; set; }
